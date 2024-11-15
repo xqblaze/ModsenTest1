@@ -1,15 +1,10 @@
-import React from 'react';
-import { useParams } from 'react-router-dom';
-import './BookDetails.css'; 
-const BookDetails = () => {
-    const { id } = useParams();
+// import React from 'react';
 
-    return (
-        <div className="BookDetails">
-            <h2>Book Details</h2>
-            <p>Book ID: {id}</p>
-        </div>
-    );
-}
+// const BookDetails = ({ bookId }) => (
+//   <div className="BookDetails">
+//     <h2>Book Details</h2>
+//     <p>Book ID: {bookId}</p>
+//   </div>
+// );
 
-export default BookDetails;
+// export default BookDetails;

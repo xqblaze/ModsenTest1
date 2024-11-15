@@ -1,31 +1,26 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes, Link} from 'react-router-dom'; 
 import BookDetails from './components/BookDetails';
 import BookSearch from './components/BookSearch';
-import BookCard from './components/BookCard'; 
-import './App.css'; 
-function App() {
-    return (
-        <>
-            <header> 
-                <Link to='/' className="StoreLink">Search</Link>
-                <Link to='/details' className="StoreLink">BookDetails</Link>
-            </header>
-            <div className="app">
-                <h1>Book Search App</h1>
-                <Routes>
-                    <Route path="/" element={<BookSearch />} />
-                    <Route path="/details" element={<BookDetails />} />
-                </Routes>
-                <BookCard 
-                    // title="Sample Book Title"
-                    // author="John Doe"
-                    // image="https://example.com/book.jpg"
-                    // details="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-                />
-            </div>
-        </>
-    );
-}
+import './styles/App.css';
+
+const App = () => (
+  <div>
+    <header>
+      <a href="/" className="StoreLink">Search</a>
+      {/* <a href="/details" className="StoreLink">BookDetails</a> */}
+    </header>
+    <div className="app">
+      <h1>Book Search App</h1>
+      <BookSearch />
+      {/* <BookDetails bookId="" /> */}
+      {/* <BookCard
+        // title="Sample Book Title"
+        // author="John Doe"
+        // image="https://example.com/book.jpg"
+        // details="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+      /> */}
+    </div>
+  </div>
+);
 
 export default App;
